@@ -3,10 +3,9 @@ import pencil from "../../assets/pencil3.png";
 import trash from "../../assets/trash2.png";
 import { useContext } from "react";
 import { CreateContext } from "../../context/context";
-import { json } from "react-router-dom";
 
-export function Card(data) {
-  const { deleteContact, setModalRemove, setModalUpdated, setDataUserPatch } =
+export const Card = (data) => {
+  const { setModalRemove, setModalUpdated, setDataUserPatch } =
     useContext(CreateContext);
   return (
     <CardStyled>
@@ -37,4 +36,4 @@ export function Card(data) {
       </div>
     </CardStyled>
   );
-}
+};

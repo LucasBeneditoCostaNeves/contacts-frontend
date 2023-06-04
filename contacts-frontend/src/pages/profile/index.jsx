@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { ProfileStyled } from "./styled";
 import { CreateContext } from "../../context/context";
 import img from "../../assets/profile.png";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { ModalRemove } from "../../components/modalRemove";
 import { ModalUpdated } from "../../components/modalUpdated";
 
-export function PageProfile() {
+export const PageProfile = () => {
   const {
     capturingDataUser,
     dataUser,
@@ -59,4 +59,4 @@ export function PageProfile() {
       <ToastContainer autoClose={1400} />
     </ProfileStyled>
   );
-}
+};

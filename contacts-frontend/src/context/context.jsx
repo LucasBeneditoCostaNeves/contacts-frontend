@@ -23,9 +23,10 @@ export const Provider = ({ children }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(response);
       setDataUser(response.data);
-    } catch {}
+    } catch (error) {
+      console.log(error.response);
+    }
   }
 
   async function capturingContacts() {
@@ -36,7 +37,6 @@ export const Provider = ({ children }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(response);
       setContacts(response.data);
       setLoading(true);
     } catch {}
@@ -50,7 +50,7 @@ export const Provider = ({ children }) => {
       telephone: Number(data.telephone),
     };
     try {
-      const response = await api.post("contacts/", newData, {
+      await api.post("contacts/", newData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -75,7 +75,6 @@ export const Provider = ({ children }) => {
         ? Number(data.telephone)
         : Number(dataUserPatch.telephone),
     };
-    console.log(newData);
     try {
       await api.patch(`contacts/${idUser}`, newData, {
         headers: {
