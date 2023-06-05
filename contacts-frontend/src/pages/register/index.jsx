@@ -28,7 +28,8 @@ export const registerSchema = yup.object().shape({
   telephone: yup
     .string("Precisa ser um número")
     .required("Telefone obrigatório")
-    .min(6, "Minímo 8 caracteres"),
+    .min(6, "Minímo 8 caracteres")
+    .max(20, "Máximo 20 caracteres"),
 });
 
 export const PageRegister = () => {

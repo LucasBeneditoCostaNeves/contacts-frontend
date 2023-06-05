@@ -87,8 +87,9 @@ export const ProfileStyled = styled.div`
     -webkit-box-orient: vertical;
   }
 
-  li > h4 {
-    margin: 7px 0px;
+  li > h5 {
+    margin-top: 15px;
+    margin-bottom: 3px;
   }
 
   .zero {

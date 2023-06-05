@@ -24,7 +24,8 @@ export const ModalAdd = () => {
     telephone: yup
       .string("Precisa ser um número")
       .required("Telefone obrigatório")
-      .min(6, "Minímo 6 caracteres"),
+      .min(6, "Minímo 6 caracteres")
+      .max(19, "Máximo 20 caracteres"),
   });
 
   const {

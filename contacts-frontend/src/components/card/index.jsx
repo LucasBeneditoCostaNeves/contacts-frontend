@@ -10,8 +10,8 @@ export const Card = (data) => {
   return (
     <CardStyled>
       <h3>{data && data.name}</h3>
-      <h4>{data && data.email}</h4>
       <h5>{data && data.telephone}</h5>
+      <h4>{data && data.email}</h4>
       <div>
         <img
           onClick={() => {
